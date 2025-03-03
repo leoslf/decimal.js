@@ -133,6 +133,7 @@ var EXP_LIMIT = 9e15,                      // 0 to 9e15
  *  cosine                    cos
  *  cubeRoot                  cbrt
  *  decimalPlaces             dp
+ *  degrees                   deg
  *  dividedBy                 div
  *  dividedToIntegerBy        divToInt
  *  equals                    eq
@@ -166,6 +167,8 @@ var EXP_LIMIT = 9e15,                      // 0 to 9e15
  *  negated                   neg
  *  plus                      add
  *  precision                 sd
+ *  radians                   rad
+ *  reciprocal                inv
  *  round
  *  sine                      sin
  *  squareRoot                sqrt
@@ -415,6 +418,15 @@ P.cubeRoot = P.cbrt = function () {
 
   return finalise(r, e, Ctor.rounding, m);
 };
+
+
+/*
+ * Return a new Decimal whose value is the degrees of this Decimal
+ *
+ */
+P.degrees = P.deg = function () {
+  return this.div(PI).mul(180);
+}
 
 
 /*
@@ -1654,6 +1666,25 @@ P.precision = P.sd = function (z) {
 
   return k;
 };
+
+
+/*
+ * Return a new Decimal whose value is the radians from this Decimal
+ *
+ */
+P.radians = P.rad = function () {
+  return this.mul(PI).div(180);
+}
+
+
+/*
+ * Return a new Decimal whose value is the reciprocal of this Decimal, rounded to
+ * `precision` significant digits using rounding mode `rounding`.
+ *
+ */
+P.reciprocal = P.inv = function () {
+  return new this(1).div(this);
+}
 
 
 /*
@@ -4429,10 +4460,14 @@ function clone(obj) {
   Decimal.clamp = clamp;
   Decimal.cos = cos;
   Decimal.cosh = cosh;          // ES6
+  Decimal.degrees = degrees;
+  Decimal.deg = degrees;
   Decimal.div = div;
+  Decimal.divToInt = divToInt;
   Decimal.exp = exp;
   Decimal.floor = floor;
   Decimal.hypot = hypot;        // ES6
+  Decimal.inv = reciprocal;
   Decimal.ln = ln;
   Decimal.log = log;
   Decimal.log10 = log10;        // ES6
@@ -4441,8 +4476,15 @@ function clone(obj) {
   Decimal.min = min;
   Decimal.mod = mod;
   Decimal.mul = mul;
+  Decimal.neg = negate;
+  Decimal.negate = negate;
   Decimal.pow = pow;
+  Decimal.product = product;
+  Decimal.prod = product;
+  Decimal.radians = radians;
+  Decimal.rad = radians;
   Decimal.random = random;
+  Decimal.reciprocal = reciprocal;
   Decimal.round = round;
   Decimal.sign = sign;          // ES6
   Decimal.sin = sin;
@@ -4469,6 +4511,16 @@ function clone(obj) {
 
 
 /*
+ * Returns a new Decimal whose value is the degrees of `n`.
+ *
+ * n {number|string|bigint|Decimal}
+ */
+function degrees(n) {
+  return new this(n).degrees();
+}
+
+
+/*
  * Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` significant
  * digits using rounding mode `rounding`.
  *
@@ -4478,6 +4530,14 @@ function clone(obj) {
  */
 function div(x, y) {
   return new this(x).div(y);
+}
+
+
+/*
+ * Return a new Decimal whose value is `x` integer divided by `y
+ */
+function divToInt(x, y) {
+  return new this(x).divToInt(y);
 }
 
 
@@ -4635,6 +4695,17 @@ function mod(x, y) {
 
 
 /*
+ * Return the negated `n`.
+ *
+ * n {number|string|bigint|Decimal}
+ *
+ */
+function negate(n) {
+  return new this(n).negated();
+}
+
+
+/*
  * Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision` significant
  * digits using rounding mode `rounding`.
  *
@@ -4657,6 +4728,35 @@ function mul(x, y) {
  */
 function pow(x, y) {
   return new this(x).pow(y);
+}
+
+
+/*
+ * return a new decimal whose value is the product of the arguments, rounded to `precision`
+ * significant digits using rounding mode `rounding`.
+ *
+ * only the result is rounded, not the intermediate calculations.
+ *
+ * arguments {number|string|bigint|decimal}
+ */
+function product() {
+  var i = 0,
+    args = arguments,
+    x = new this(args[i]);
+
+  external = false;
+  for (; x.s && ++i < args.length;) x = x.mul(args[i]);
+  external = true;
+
+  return finalise(x, this.precision, this.rounding);
+}
+
+
+/*
+ * Returns a new Decimal whose value is the radians of the given degrees `n`.
+ */
+function radians(n) {
+  return new this(n).radians();
 }
 
 
@@ -4766,6 +4866,15 @@ function random(sd) {
 
 
 /*
+ * Return the reciprocal of x
+ * x {number|string|bigint|Decimal}
+ */
+function reciprocal(x) {
+  return new this(x).reciprocal();
+}
+
+
+/*
  * Return a new Decimal whose value is `x` rounded to an integer using rounding mode `rounding`.
  *
  * To emulate `Math.round`, set rounding to 7 (ROUND_HALF_CEIL).
@@ -4865,7 +4974,6 @@ function sum() {
   return finalise(x, this.precision, this.rounding);
 }
 
-
 /*
  * Return a new Decimal whose value is the tangent of `x`, rounded to `precision` significant
  * digits using rounding mode `rounding`.
@@ -4909,6 +5017,6 @@ export var Decimal = P.constructor = clone(DEFAULTS);
 
 // Create the internal constants from their string values.
 LN10 = new Decimal(LN10);
-PI = new Decimal(PI);
+PI = Decimal.PI = new Decimal(PI);
 
 export default Decimal;

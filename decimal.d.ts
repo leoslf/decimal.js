@@ -76,6 +76,9 @@ export declare class Decimal {
   cubeRoot(): Decimal;
   cbrt(): Decimal;
 
+  degrees(): Decimal;
+  deg(): Decimal;
+
   decimalPlaces(): number;
   dp(): number;
 
@@ -168,6 +171,12 @@ export declare class Decimal {
   precision(includeZeros?: boolean): number;
   sd(includeZeros?: boolean): number;
 
+  radians(): Decimal;
+  rad(): Decimal;
+
+  reciprocal(): Decimal;
+  inv(): Decimal;
+
   round(): Decimal;
 
   sine() : Decimal;
@@ -246,7 +255,10 @@ export declare class Decimal {
   static config(object: Decimal.Config): Decimal.Constructor;
   static cos(n: Decimal.Value): Decimal;
   static cosh(n: Decimal.Value): Decimal;
+  static degrees(n: Decimal.Value): Decimal;
+  static deg(n: Decimal.Value): Decimal;
   static div(x: Decimal.Value, y: Decimal.Value): Decimal;
+  static divToInt(x: Decimal.Value, y: Decimal.Value): Decimal;
   static exp(n: Decimal.Value): Decimal;
   static floor(n: Decimal.Value): Decimal;
   static hypot(...n: Decimal.Value[]): Decimal;
@@ -259,9 +271,17 @@ export declare class Decimal {
   static min(...n: Decimal.Value[]): Decimal;
   static mod(x: Decimal.Value, y: Decimal.Value): Decimal;
   static mul(x: Decimal.Value, y: Decimal.Value): Decimal;
+  static negate(x: Decimal.Value): Decimal;
+  static neg(n: Decimal.Value): Decimal;
   static noConflict(): Decimal.Constructor;   // Browser only
   static pow(base: Decimal.Value, exponent: Decimal.Value): Decimal;
+  static product(...n: Decimal.Value[]): Decimal;
+  static prod(...n: Decimal.Value[]): Decimal;
+  static radians(n: Decimal.Value): Decimal;
+  static rad(n: Decimal.Value): Decimal;
   static random(significantDigits?: number): Decimal;
+  static reciprocal(n: Decimal.Value): Decimal;
+  static inv(n: Decimal.Value): Decimal;
   static round(n: Decimal.Value): Decimal;
   static set(object: Decimal.Config): Decimal.Constructor;
   static sign(n: Decimal.Value): number;
@@ -296,6 +316,8 @@ export declare class Decimal {
   static readonly ROUND_HALF_CEIL: 7;
   static readonly ROUND_HALF_FLOOR: 8;
   static readonly EUCLID: 9;
+
+  static readonly PI: Decimal;
 }
 
 export declare function Decimal(n: Decimal.Value): Decimal;
