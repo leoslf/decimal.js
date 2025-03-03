@@ -4464,10 +4464,16 @@ function clone(obj) {
   Decimal.deg = degrees;
   Decimal.div = div;
   Decimal.divToInt = divToInt;
+  Decimal.equals = equals;
+  Decimal.eq = equals;
   Decimal.exp = exp;
   Decimal.floor = floor;
   Decimal.hypot = hypot;        // ES6
+  Decimal.gt = gt;
+  Decimal.gte = gte;
   Decimal.inv = reciprocal;
+  Decimal.lt = lt;
+  Decimal.lte = lte;
   Decimal.ln = ln;
   Decimal.log = log;
   Decimal.log10 = log10;        // ES6
@@ -4542,6 +4548,18 @@ function divToInt(x, y) {
 
 
 /*
+ * Return whether `a` and `b` are equal.
+ *
+ * a {number|string|bigint|Decimal}
+ * b {number|string|bigint|Decimal}
+ *
+ */
+function equals(a, b) {
+  return new this(b).equals(b);
+}
+
+
+/*
  * Return a new Decimal whose value is the natural exponential of `x`, rounded to `precision`
  * significant digits using rounding mode `rounding`.
  *
@@ -4599,12 +4617,60 @@ function hypot() {
 
 
 /*
+ * Return whether `a` is greater than `b`.
+ *
+ * a {number|string|bigint|Decimal}
+ * b {number|string|bigint|Decimal}
+ *
+ */
+function gt(a, b) {
+  return new this(a).gt(b);
+}
+
+
+/*
+ * Return whether `a` is greater than or equal to `b`.
+ *
+ * a {number|string|bigint|Decimal}
+ * b {number|string|bigint|Decimal}
+ *
+ */
+function gte(a, b) {
+  return new this(a).gte(b);
+}
+
+
+/*
  * Return true if object is a Decimal instance (where Decimal is any Decimal constructor),
  * otherwise return false.
  *
  */
 function isDecimalInstance(obj) {
   return obj instanceof Decimal || obj && obj.toStringTag === tag || false;
+}
+
+
+/*
+ * Return whether `a` is less than `b`.
+ *
+ * a {number|string|bigint|Decimal}
+ * b {number|string|bigint|Decimal}
+ *
+ */
+function lt(a, b) {
+  return new this(a).lt(b);
+}
+
+
+/*
+ * Return whether `a` is less than or equal to `b`.
+ *
+ * a {number|string|bigint|Decimal}
+ * b {number|string|bigint|Decimal}
+ *
+ */
+function lte(a, b) {
+  return new this(a).lte(b);
 }
 
 

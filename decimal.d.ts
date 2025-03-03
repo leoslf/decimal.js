@@ -260,9 +260,15 @@ export declare class Decimal {
   static div(x: Decimal.Value, y: Decimal.Value): Decimal;
   static divToInt(x: Decimal.Value, y: Decimal.Value): Decimal;
   static exp(n: Decimal.Value): Decimal;
+  static equals(a: Decimal.Value, b: Decimal.Value): boolean;
+  static eq(a: Decimal.Value, b: Decimal.Value): boolean;
   static floor(n: Decimal.Value): Decimal;
+  static gt(a: Decimal.Value, b: Decimal.Value): boolean;
+  static gte(a: Decimal.Value, b: Decimal.Value): boolean;
   static hypot(...n: Decimal.Value[]): Decimal;
   static isDecimal(object: any): object is Decimal;
+  static lt(a: Decimal.Value, b: Decimal.Value): boolean;
+  static lte(a: Decimal.Value, b: Decimal.Value): boolean;
   static ln(n: Decimal.Value): Decimal;
   static log(n: Decimal.Value, base?: Decimal.Value): Decimal;
   static log2(n: Decimal.Value): Decimal;

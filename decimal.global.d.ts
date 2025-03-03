@@ -12,7 +12,7 @@
 //   type      Decimal.Instance
 //   type      Decimal.Modulo
 //   type      Decimal.Rounding
-//   type      Decimal.Value
+//   type      DecimalValue
 //   interface Decimal.Config
 //
 // Example (alternative syntax commented-out):
@@ -23,7 +23,7 @@
 //   let r: Decimal.Rounding = Decimal.ROUND_UP;
 //   let c: Decimal.Configuration = {precision: 4, rounding: r};
 //   Decimal.set(c);
-//   let v: Decimal.Value = '12345.6789';
+//   let v: DecimalValue = '12345.6789';
 //   let d: Decimal = new Decimal(v);
 //   //let d: Decimal.Instance = new Decimal(v);
 //
@@ -85,8 +85,8 @@ export declare class Decimal {
 
   ceil(): Decimal;
 
-  clampedTo(min: Decimal.Value, max: Decimal.Value): Decimal;
-  clamp(min: Decimal.Value, max: Decimal.Value): Decimal;
+  clampedTo(min: DecimalValue, max: DecimalValue): Decimal;
+  clamp(min: DecimalValue, max: DecimalValue): Decimal;
 
   comparedTo(n: DecimalValue): number;
   cmp(n: DecimalValue): number;
@@ -271,7 +271,7 @@ export declare class Decimal {
   static atan2(y: DecimalValue, x: DecimalValue): Decimal;
   static cbrt(n: DecimalValue): Decimal;
   static ceil(n: DecimalValue): Decimal;
-  static clamp(n: Decimal.Value, min: Decimal.Value, max: Decimal.Value): Decimal;
+  static clamp(n: DecimalValue, min: DecimalValue, max: DecimalValue): Decimal;
   static clone(object?: DecimalConfig): DecimalConstructor;
   static config(object: DecimalConfig): DecimalConstructor;
   static cos(n: DecimalValue): Decimal;
@@ -281,9 +281,15 @@ export declare class Decimal {
   static div(x: DecimalValue, y: DecimalValue): Decimal;
   static divToInt(x: DecimalValue, y: DecimalValue): Decimal;
   static exp(n: DecimalValue): Decimal;
+  static equals(a: DecimalValue, b: DecimalValue): boolean;
+  static eq(a: DecimalValue, b: DecimalValue): boolean;
   static floor(n: DecimalValue): Decimal;
+  static gt(a: DecimalValue, b: DecimalValue): boolean;
+  static gte(a: DecimalValue, b: DecimalValue): boolean;
   static hypot(...n: DecimalValue[]): Decimal;
   static isDecimal(object: any): object is Decimal;
+  static lt(a: DecimalValue, b: DecimalValue): boolean;
+  static lte(a: DecimalValue, b: DecimalValue): boolean;
   static ln(n: DecimalValue): Decimal;
   static log(n: DecimalValue, base?: DecimalValue): Decimal;
   static log2(n: DecimalValue): Decimal;
@@ -310,7 +316,7 @@ export declare class Decimal {
   static sinh(n: DecimalValue): Decimal;
   static sqrt(n: DecimalValue): Decimal;
   static sub(x: DecimalValue, y: DecimalValue): Decimal;
-  static sum(...n: Decimal.Value[]): Decimal;
+  static sum(...n: DecimalValue[]): Decimal;
   static tan(n: DecimalValue): Decimal;
   static tanh(n: DecimalValue): Decimal;
   static trunc(n: DecimalValue): Decimal;
@@ -341,4 +347,4 @@ export declare class Decimal {
   static readonly PI: Decimal;
 }
 
-export declare function Decimal(n: Decimal.Value): Decimal;
+export declare function Decimal(n: DecimalValue): Decimal;
