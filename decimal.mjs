@@ -4352,6 +4352,14 @@ function clone(obj) {
       return;
     }
 
+    var cached;
+    if ((cached = Decimal.#cache[v])) {
+      x.s = cached.s;
+      x.e = cached.e;
+      x.d = cached.d;
+      return;
+    }
+
     t = typeof v;
 
     if (t === 'number') {
@@ -4359,6 +4367,7 @@ function clone(obj) {
         x.s = 1 / v < 0 ? -1 : 1;
         x.e = 0;
         x.d = [0];
+        Decimal.#cache[v] = x;
         return;
       }
 
@@ -4389,18 +4398,21 @@ function clone(obj) {
           x.d = [v];
         }
 
+        Decimal.#cache[v] = x;
         return;
       }
 
       // Infinity or NaN?
       if (v * 0 !== 0) {
-        if (!v) x.s = NaN;
+        if (!v) {
+          x.s = NaN;
+        }
         x.e = NaN;
         x.d = null;
         return;
       }
 
-      return parseDecimal(x, v.toString());
+      return (Decimal.#cache[v] = parseDecimal(x, v.toString()));
     }
 
     if (t === 'string') {
@@ -4412,7 +4424,7 @@ function clone(obj) {
         x.s = 1;
       }
 
-      return isDecimal.test(v) ? parseDecimal(x, v) : parseOther(x, v);
+      return (Decimal.#cache[v] = isDecimal.test(v) ? parseDecimal(x, v) : parseOther(x, v));
     }
 
     if (t === 'bigint') {
@@ -4423,13 +4435,15 @@ function clone(obj) {
         x.s = 1;
       }
 
-      return parseDecimal(x, v.toString());
+      return (Decimal.#cache[v] = parseDecimal(x, v.toString()));
     }
 
     throw Error(invalidArgument + v);
   }
 
   Decimal.prototype = P;
+
+  Decimal.#cache = {};
 
   Decimal.ROUND_UP = 0;
   Decimal.ROUND_DOWN = 1;

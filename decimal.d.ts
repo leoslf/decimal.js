@@ -324,6 +324,8 @@ export declare class Decimal {
   static readonly EUCLID: 9;
 
   static readonly PI: Decimal;
+
+  static #cache: Record<string | number, Decimal>;
 }
 
 export declare function Decimal(n: Decimal.Value): Decimal;
