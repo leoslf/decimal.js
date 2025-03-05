@@ -1687,7 +1687,7 @@
    *
    */
   P.reciprocal = P.inv = function () {
-    return new this(1).div(this);
+    return new this.constructor(1).div(this);
   }
 
 
