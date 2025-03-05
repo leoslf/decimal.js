@@ -53,15 +53,15 @@ T = (function () {
     }
   };
 
-  T.assertEqualDecimal = function (x, y) {
+  T.assertEqualDecimal = function (expected, actual) {
     ++testNumber;
-    if (x.eq(y) || x.isNaN() && y.isNaN()) {
+    if (actual.equals(expected) || expected.isNaN() && expected.isNaN()) {
       ++passed;
     } else {
       write(
         '\n  Test number ' + testNumber + ' failed: assertEqualDecimal' +
-        '\n  x: ' + x.valueOf() +
-        '\n  y: ' + y.valueOf()
+        '\n  expected: ' + expected.valueOf() +
+        '\n  actual:   ' + actual.valueOf()
       );
     }
   };

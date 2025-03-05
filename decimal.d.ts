@@ -239,6 +239,8 @@ export declare class Decimal {
 
   valueOf(): string;
 
+  static toNumber(n: Decimal.Value): number;
+
   static abs(n: Decimal.Value): Decimal;
   static acos(n: Decimal.Value): Decimal;
   static acosh(n: Decimal.Value): Decimal;
@@ -300,6 +302,8 @@ export declare class Decimal {
   static tanh(n: Decimal.Value): Decimal;
   static trunc(n: Decimal.Value): Decimal;
 
+  static pi(n: Decimal.Value): Decimal;
+
   static readonly default?: Decimal.Constructor;
   static readonly Decimal?: Decimal.Constructor;
 
@@ -323,9 +327,8 @@ export declare class Decimal {
   static readonly ROUND_HALF_FLOOR: 8;
   static readonly EUCLID: 9;
 
-  static readonly PI: Decimal;
-
-  static #cache: Record<string | number, Decimal>;
+  static readonly PI: Decimal.Value;
+  static readonly EXP_LIMIT: number;
 }
 
 export declare function Decimal(n: Decimal.Value): Decimal;

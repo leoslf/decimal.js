@@ -260,6 +260,8 @@ export declare class Decimal {
 
   valueOf(): string;
 
+  static toNumber(n: DecimalValue): number;
+
   static abs(n: DecimalValue): Decimal;
   static acos(n: DecimalValue): Decimal;
   static acosh(n: DecimalValue): Decimal;
@@ -321,6 +323,8 @@ export declare class Decimal {
   static tanh(n: DecimalValue): Decimal;
   static trunc(n: DecimalValue): Decimal;
 
+  static pi(n: DecimalValue): Decimal;
+
   static readonly default?: DecimalConstructor;
   static readonly Decimal?: DecimalConstructor;
 
@@ -344,7 +348,8 @@ export declare class Decimal {
   static readonly ROUND_HALF_FLOOR: 8;
   static readonly EUCLID: 9;
 
-  static readonly PI: Decimal;
+  static readonly PI: DecimalValue;
+  static readonly EXP_LIMIT: number;
 }
 
 export declare function Decimal(n: DecimalValue): Decimal;

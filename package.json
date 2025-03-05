@@ -16,7 +16,7 @@
     "bigint",
     "bignum"
   ],
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "https://github.com/MikeMcl/decimal.js.git"
   },
@@ -51,5 +51,8 @@
     "decimal.js",
     "decimal.mjs",
     "decimal.d.ts"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^22.13.9"
+  }
 }

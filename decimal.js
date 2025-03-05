@@ -28,8 +28,15 @@
     // The natural logarithm of 10 (1025 digits).
     LN10 = '2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058',
 
-    // Pi (1025 digits).
-    PI = '3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789',
+    // Pi (2048 digits).
+    PI = '3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632788659361533818279682303019520353018529689957736225994138912497217752834791315155748572424541506959508295331168617278558890750983817546374649393192550604009277016711390098488240128583616035637076601047101819429555961989467678374494482553797747268471040475346462080466842590694912933136770289891521047521620569660240580381501935112533824300355876402474964732639141992726042699227967823547816360093417216412199245863150302861829745557067498385054945885869269956909272107975093029553211653449872027559602364806654991198818347977535663698074265425278625518184175746728909777727938000816470600161452491921732172147723501414419735685481613611573525521334757418494684385233239073941433345477624168625189835694855620992192221842725502542568876717904946016534668049886272327917860857843838279679766814541009538837863609506800642251252051173929848960841284886269456042419652850222106611863067442786220391949450471237137869609563643719172874677646575739624138908658326459958133904780275900994657640789512694683983525957098258226205224894',
+
+    // pi/180 (2052 digits)
+    RAD2DEG = '57.2957795130823208767981548141051703324054724665643215491602438612028471483215526324409689958511109441862233816328648932814482646012483150360682678634119421225263880974672679263079887028931107679382614426382631582096104604870205064442596568411201719120577385662804312849626242033761879372976238707903403159807196240895220451862054599233963148419069662201151266096918015147876373669231641071267740385146901654995941925157119864794352106616243890352023067561777967571133156835062057313133601565013488980187887099177764391811593169200139029797682608293230553397026181660490929593282083154995798031955967007118252058466439231799858456719168439917754131652959953056406279044967248722534340724738330651858790088201071935485520604850068426473490756058743885675329321782466021242331327342721294453089166761671467202323137495784487981772906726908497801351886627439550559185806930334380673689717269463983388546519913267567748257649341692338111382433230532082241985164541395979472567140094041784696151560535821579204602135452019010741621029351292616097898440035322382044732762827209092091801711451089056465302082009791230590940235422404187355837087437553845735863291021994727895598218915795238066005179904645782827049454507745761475862299737879430917506427740398483290806153137455979422751556017881484918518940459609395139971984530643555626981802696960336478401854845389817269860386482453584697394669284938744103484193386708268079764660716018045278443171252674165178261172779938572835145352758413826483548983689719547487479425071857197094475661164401177207263621272224729886774619276575958049333831015876088788700955503726457664555633689795390872759934076388463957231359870797922613653859299456731829760185434493762364931628853725016524805627090830946056659456251070994031619085592872592047590851137444962822195617280740517898121330993699703243576913955116337162192731083315099360778006627685163451003742202461968143232204958588886409860439149837477236524845740103816051768390737500586013714984053596425074927816446441901217325510444203977327747413202327512621567',
+    DEGREES_PRECISION = 2048,
+    // 180/pi (2052 digits)
+    DEG2RAD = '0.0174532925199432957692369076848861271344287188854172545609719144017100911460344944368224156963450948221230449250737905924838546922752810123984742189340471173191682450150107695616975535812386053051687886912711720870329635896026424901877043509181733439396980475940192241589469684813789632978181124952292984699278144795310454160084495609046069671761964687105143908889518362808267803695632452608441195089412947626131431088441838454784298996256210728062141559692354442374975963993652929160623774343500663840546315186802258702393667855274799734707621705676658941316820585512065349620930688037489914870522507333364895952514642268210320630153210533842979843262303802272290275190563697199187280599571093847717974556664228451612331159113023231100757209709517220028817067297222222131832113886169985096267560906588612469969741494905702362350458519149168625662843787278333507657708493699307400465634478732092730405755458527246041970485064420159104575210421875108765658765585120623711478500107104256177550512023344385449736511170304770182159218675187879331568350108446405658498277542979033300771736095654182415507306420825402358563927552823862950936762658660504172132319702081385517736392244495983426174389436045778492131200197983758894706121219053088677719264879858302680854431929269283558196369233780371347726082849628537612721619561375120114275890225446563899639514076801668643757791527581847995233292922459440155376797487868667185651202289995810350835015899054141983708324361416366032607055316162622822083850164184509185832622375331124248925861062215657488764087020544857030140436808434356531926271720987377433337869281112008069399565178734154019452302331864919342297842075141785193096769414913251295772633007963030431245381251054642749197894401067899126252791903160426210583033425192600277145957377321449210243545998220926747450052993543686719482225790284733617632943605338007138257052533568998071390122814510350374682145668844163613729095210386719798020662071525986925420775689660603657369221989632804334866116636986893275070526022130699761656990145584582744874',
+    RADIANS_PRECISION = 2048,
 
 
     // The initial configuration properties of the Decimal constructor.
@@ -202,7 +209,9 @@
    */
   P.absoluteValue = P.abs = function () {
     var x = new this.constructor(this);
-    if (x.s < 0) x.s = 1;
+    if (x.s < 0) {
+      x.s = 1;
+    }
     return finalise(x);
   };
 
@@ -231,8 +240,15 @@
       Ctor = x.constructor;
     min = new Ctor(min);
     max = new Ctor(max);
-    if (!min.s || !max.s) return new Ctor(NaN);
-    if (min.gt(max)) throw Error(invalidArgument + max);
+
+    if (!min.s || !max.s) {
+      return new Ctor(NaN);
+    }
+
+    if (min.gt(max)) {
+      throw Error(invalidArgument + max);
+    }
+
     k = x.cmp(min);
     return k < 0 ? min : x.cmp(max) > 0 ? max : new Ctor(x);
   };
@@ -260,20 +276,28 @@
     }
 
     // Either zero?
-    if (!xd[0] || !yd[0]) return xd[0] ? xs : yd[0] ? -ys : 0;
+    if (!xd[0] || !yd[0]) {
+      return xd[0] ? xs : yd[0] ? -ys : 0;
+    }
 
     // Signs differ?
-    if (xs !== ys) return xs;
+    if (xs !== ys) {
+      return xs;
+    }
 
     // Compare exponents.
-    if (x.e !== y.e) return x.e > y.e ^ xs < 0 ? 1 : -1;
+    if (x.e !== y.e) {
+      return x.e > y.e ^ xs < 0 ? 1 : -1;
+    }
 
     xdL = xd.length;
     ydL = yd.length;
 
     // Compare digit by digit.
     for (i = 0, j = xdL < ydL ? xdL : ydL; i < j; ++i) {
-      if (xd[i] !== yd[i]) return xd[i] > yd[i] ^ xs < 0 ? 1 : -1;
+      if (xd[i] !== yd[i]) {
+        return xd[i] > yd[i] ^ xs < 0 ? 1 : -1;
+      }
     }
 
     // Compare lengths.
@@ -299,10 +323,14 @@
       x = this,
       Ctor = x.constructor;
 
-    if (!x.d) return new Ctor(NaN);
+    if (!x.d) {
+      return new Ctor(NaN);
+    }
 
     // cos(0) = cos(-0) = 1
-    if (!x.d[0]) return new Ctor(1);
+    if (!x.d[0]) {
+      return new Ctor(1);
+    }
 
     pr = Ctor.precision;
     rm = Ctor.rounding;
@@ -339,7 +367,9 @@
       x = this,
       Ctor = x.constructor;
 
-    if (!x.isFinite() || x.isZero()) return new Ctor(x);
+    if (!x.isFinite() || x.isZero()) {
+      return new Ctor(x);
+    }
     external = false;
 
     // Initial estimate.
@@ -352,7 +382,9 @@
       e = x.e;
 
       // Adjust n exponent so it is a multiple of 3 away from x exponent.
-      if (s = (e - n.length + 1) % 3) n += (s == 1 || s == -2 ? '0' : '00');
+      if (s = (e - n.length + 1) % 3) {
+        n += (s == 1 || s == -2 ? '0' : '00');
+      }
       s = mathpow(n, 1 / 3);
 
       // Rarely, e may be one less than the result exponent value.
@@ -429,7 +461,14 @@
    *
    */
   P.degrees = P.deg = function () {
-    return this.mul(180).div(PI);
+    var result,
+      x = this,
+      Ctor = x.constructor,
+      pr = Ctor.precision;
+    Ctor.precision = DEGREES_PRECISION;
+    result = this.mul(RAD2DEG);
+    Ctor.precision = pr;
+    return result;
   }
 
 
@@ -448,8 +487,15 @@
 
       // Subtract the number of trailing zeros of the last word.
       w = d[w];
-      if (w) for (; w % 10 == 0; w /= 10) n--;
-      if (n < 0) n = 0;
+      if (w) {
+        for (; w % 10 == 0; w /= 10) {
+          n--;
+        }
+      }
+
+      if (n < 0) {
+        n = 0;
+      }
     }
 
     return n;
@@ -637,7 +683,9 @@
       x = this,
       Ctor = x.constructor;
 
-    if (!x.isFinite() || x.isZero()) return new Ctor(x);
+    if (!x.isFinite() || x.isZero()) {
+      return new Ctor(x);
+    }
 
     pr = Ctor.precision;
     rm = Ctor.rounding;
@@ -830,7 +878,9 @@
       x = this,
       Ctor = x.constructor;
 
-    if (!x.isFinite() || x.isZero()) return new Ctor(x);
+    if (!x.isFinite() || x.isZero()) {
+      return new Ctor(x);
+    }
 
     pr = Ctor.precision;
     rm = Ctor.rounding;
@@ -872,14 +922,21 @@
       x = this,
       Ctor = x.constructor;
 
-    if (!x.isFinite()) return new Ctor(NaN);
-    if (x.e >= 0) return new Ctor(x.abs().eq(1) ? x.s / 0 : x.isZero() ? x : NaN);
+    if (!x.isFinite()) {
+      return new Ctor(NaN);
+    }
+
+    if (x.e >= 0) {
+      return new Ctor(x.abs().eq(1) ? x.s / 0 : x.isZero() ? x : NaN);
+    }
 
     pr = Ctor.precision;
     rm = Ctor.rounding;
     xsd = x.sd();
 
-    if (Math.max(xsd, pr) < 2 * -x.e - 1) return finalise(new Ctor(x), pr, rm, true);
+    if (Math.max(xsd, pr) < 2 * -x.e - 1) {
+      return finalise(new Ctor(x), pr, rm, true);
+    }
 
     Ctor.precision = wpr = xsd - x.e;
 
@@ -983,7 +1040,9 @@
       rm = Ctor.rounding;
 
     if (!x.isFinite()) {
-      if (!x.s) return new Ctor(NaN);
+      if (!x.s) {
+        return new Ctor(NaN);
+      }
       if (pr + 4 <= PI_PRECISION) {
         r = getPi(Ctor, pr + 4, rm).times(0.5);
         r.s = x.s;
@@ -1000,7 +1059,9 @@
     Ctor.precision = wpr = pr + 10;
     Ctor.rounding = 1;
 
-    // TODO? if (x >= 1 && pr <= PI_PRECISION) atan(x) = halfPi * x.s - atan(1 / x);
+    // TODO? if (x >= 1 && pr <= PI_PRECISION) {
+    //  atan(x) = halfPi * x.s - atan(1 / x);
+    // }
 
     // Argument reduction
     // Ensure |x| < 0.42
@@ -1026,10 +1087,14 @@
       px = px.times(x2);
       r = t.plus(px.div(n += 2));
 
-      if (r.d[j] !== void 0) for (i = j; r.d[i] === t.d[i] && i--;);
+      if (r.d[j] !== void 0) {
+        for (i = j; r.d[i] === t.d[i] && i--;);
+      }
     }
 
-    if (k) r = r.times(2 << (k - 1));
+    if (k) {
+      r = r.times(2 << (k - 1));
+    }
 
     external = true;
 
@@ -1283,15 +1348,21 @@
     if (!x.d || !y.d) {
 
       // Return NaN if either is NaN.
-      if (!x.s || !y.s) y = new Ctor(NaN);
+      if (!x.s || !y.s) {
+        y = new Ctor(NaN);
+      }
 
       // Return y negated if x is finite and y is ±Infinity.
-      else if (x.d) y.s = -y.s;
+      else if (x.d) {
+        y.s = -y.s;
+      }
 
       // Return x if y is finite and x is ±Infinity.
       // Return x if both are ±Infinity with different signs.
       // Return NaN if both are ±Infinity with the same sign.
-      else y = new Ctor(y.d || x.s !== y.s ? x : NaN);
+      else {
+        y = new Ctor(y.d || x.s !== y.s ? x : NaN);
+      }
 
       return y;
     }
@@ -1311,14 +1382,20 @@
     if (!xd[0] || !yd[0]) {
 
       // Return y negated if x is zero and y is non-zero.
-      if (yd[0]) y.s = -y.s;
+      if (yd[0]) {
+        y.s = -y.s;
+      }
 
       // Return x if y is zero and x is non-zero.
-      else if (xd[0]) y = new Ctor(x);
+      else if (xd[0]) {
+        y = new Ctor(x);
+      }
 
       // Return zero if both are zero.
       // From IEEE 754 (2008) 6.3: 0 - 0 = -0 - -0 = -0 when rounding to -Infinity.
-      else return new Ctor(rm === 3 ? -0 : 0);
+      else {
+        return new Ctor(rm === 3 ? -0 : 0);
+      }
 
       return external ? finalise(y, pr, rm) : y;
     }
@@ -1358,7 +1435,9 @@
 
       // Prepend zeros to equalise exponents.
       d.reverse();
-      for (i = k; i--;) d.push(0);
+      for (i = k; i--;) {
+        d.push(0);
+      }
       d.reverse();
 
     // Base 1e7 exponents equal.
@@ -1369,7 +1448,9 @@
       i = xd.length;
       len = yd.length;
       xLTy = i < len;
-      if (xLTy) len = i;
+      if (xLTy) {
+        len = i;
+      }
 
       for (i = 0; i < len; i++) {
         if (xd[i] != yd[i]) {
@@ -1392,7 +1473,9 @@
 
     // Append zeros to `xd` if shorter.
     // Don't add zeros to `yd` if shorter as subtraction only needs to start at `yd` length.
-    for (i = yd.length - len; i > 0; --i) xd[len++] = 0;
+    for (i = yd.length - len; i > 0; --i) {
+      xd[len++] = 0;
+    }
 
     // Subtract yd from xd.
     for (i = yd.length; i > k;) {
@@ -1407,13 +1490,19 @@
     }
 
     // Remove trailing zeros.
-    for (; xd[--len] === 0;) xd.pop();
+    for (; xd[--len] === 0;) {
+      xd.pop();
+    }
 
     // Remove leading zeros and adjust exponent accordingly.
-    for (; xd[0] === 0; xd.shift()) --e;
+    for (; xd[0] === 0; xd.shift()) {
+      --e;
+    }
 
     // Zero?
-    if (!xd[0]) return new Ctor(rm === 3 ? -0 : 0);
+    if (!xd[0]) {
+      return new Ctor(rm === 3 ? -0 : 0);
+    }
 
     y.d = xd;
     y.e = getBase10Exponent(xd, e);
@@ -1454,7 +1543,9 @@
     y = new Ctor(y);
 
     // Return NaN if x is ±Infinity or NaN, or y is NaN or ±0.
-    if (!x.d || !y.s || y.d && !y.d[0]) return new Ctor(NaN);
+    if (!x.d || !y.s || y.d && !y.d[0]) {
+      return new Ctor(NaN);
+    }
 
     // Return x if y is ±Infinity or x is ±0.
     if (!y.d || x.d && !x.d[0]) {
@@ -1547,13 +1638,17 @@
     if (!x.d || !y.d) {
 
       // Return NaN if either is NaN.
-      if (!x.s || !y.s) y = new Ctor(NaN);
+      if (!x.s || !y.s) {
+        y = new Ctor(NaN);
+      }
 
       // Return x if y is finite and x is ±Infinity.
       // Return x if both are ±Infinity with the same sign.
       // Return NaN if both are ±Infinity with different signs.
       // Return y if x is finite and y is ±Infinity.
-      else if (!x.d) y = new Ctor(y.d || x.s === y.s ? x : NaN);
+      else if (!x.d) {
+        y = new Ctor(y.d || x.s === y.s ? x : NaN);
+      }
 
       return y;
     }
@@ -1574,7 +1669,9 @@
 
       // Return x if y is zero.
       // Return y if y is non-zero.
-      if (!yd[0]) y = new Ctor(x);
+      if (!yd[0]) {
+        y = new Ctor(x);
+      }
 
       return external ? finalise(y, pr, rm) : y;
     }
@@ -1612,7 +1709,9 @@
 
       // Prepend zeros to equalise exponents. Note: Faster to use reverse then do unshifts.
       d.reverse();
-      for (; i--;) d.push(0);
+      for (; i--;) {
+        d.push(0);
+      }
       d.reverse();
     }
 
@@ -1640,7 +1739,9 @@
 
     // Remove trailing zeros.
     // No need to check for zero, as +x + +y != 0 && -x + -y != 0
-    for (len = xd.length; xd[--len] == 0;) xd.pop();
+    for (len = xd.length; xd[--len] == 0;) {
+      xd.pop();
+    }
 
     y.d = xd;
     y.e = getBase10Exponent(xd, e);
@@ -1659,11 +1760,15 @@
     var k,
       x = this;
 
-    if (z !== void 0 && z !== !!z && z !== 1 && z !== 0) throw Error(invalidArgument + z);
+    if (z !== void 0 && z !== !!z && z !== 1 && z !== 0) {
+      throw Error(invalidArgument + z);
+    }
 
     if (x.d) {
       k = getPrecision(x.d);
-      if (z && x.e + 1 > k) k = x.e + 1;
+      if (z && x.e + 1 > k) {
+        k = x.e + 1;
+      }
     } else {
       k = NaN;
     }
@@ -1677,7 +1782,14 @@
    *
    */
   P.radians = P.rad = function () {
-    return this.div(180).mul(PI);
+    var x = this,
+      Ctor = x.constructor,
+      pr = Ctor.precision;
+
+    Ctor.precision = RADIANS_PRECISION;
+		x = x.mul(DEG2RAD);
+    Ctor.precision = pr;
+    return x;
   }
 
 
@@ -1940,7 +2052,9 @@
     // Initialise the result array with zeros.
     r = [];
     rL = xdL + ydL;
-    for (i = rL; i--;) r.push(0);
+    for (i = rL; i--;) {
+      r.push(0);
+    }
 
     // Multiply!
     for (i = ydL; --i >= 0;) {
@@ -1955,10 +2069,15 @@
     }
 
     // Remove trailing zeros.
-    for (; !r[--rL];) r.pop();
+    for (; !r[--rL];) {
+      r.pop();
+    }
 
-    if (carry) ++e;
-    else r.shift();
+    if (carry) {
+      ++e;
+    } else {
+      r.shift();
+    }
 
     y.d = r;
     y.e = getBase10Exponent(r, e);
@@ -3638,9 +3757,13 @@
 
     if (str.indexOf('_') > -1) {
       str = str.replace(/(\d)_(?=\d)/g, '$1');
-      if (isDecimal.test(str)) return parseDecimal(x, str);
+      if (isDecimal.test(str)) {
+        return parseDecimal(x, str);
+      }
     } else if (str === 'Infinity' || str === 'NaN') {
-      if (!+str) x.s = NaN;
+      if (!+str) {
+        x.s = NaN;
+      }
       x.e = NaN;
       x.d = null;
       return x;
@@ -3686,8 +3809,12 @@
     xe = xd.length - 1;
 
     // Remove trailing zeros.
-    for (i = xe; xd[i] === 0; --i) xd.pop();
-    if (i < 0) return new Ctor(x.s * 0);
+    for (i = xe; xd[i] === 0; --i) {
+      xd.pop();
+    }
+    if (i < 0) {
+      return new Ctor(x.s * 0);
+    }
     x.e = getBase10Exponent(xd, xe);
     x.d = xd;
     external = false;
@@ -3698,10 +3825,14 @@
     // E.g. ceil(1.2 * 3) = 4, so up to 4 decimal digits are needed to represent 3 hex int digits.
     // maxDecimalFractionPartDigitCount = {Hex:4|Oct:3|Bin:1} * otherBaseFractionPartDigitCount
     // Therefore using 4 * the number of digits of str will always be enough.
-    if (isFloat) x = divide(x, divisor, len * 4);
+    if (isFloat) {
+      x = divide(x, divisor, len * 4);
+    }
 
     // Multiply by the binary exponent part if present.
-    if (p) x = x.times(Math.abs(p) < 54 ? mathpow(2, p) : Decimal.pow(2, p));
+    if (p) {
+      x = x.times(Math.abs(p) < 54 ? mathpow(2, p) : Decimal.pow(2, p));
+    }
     external = true;
 
     return x;
@@ -3765,7 +3896,9 @@
 
       if (t.d[k] !== void 0) {
         for (j = k; t.d[j] === u.d[j] && j--;);
-        if (j == -1) break;
+        if (j == -1) {
+          break;
+        }
       }
 
       j = u;
@@ -3836,8 +3969,11 @@
 
     if (isExp) {
       checkInt32(sd, 1, MAX_DIGITS);
-      if (rm === void 0) rm = Ctor.rounding;
-      else checkInt32(rm, 0, 8);
+      if (rm === void 0) {
+        rm = Ctor.rounding;
+      } else {
+        checkInt32(rm, 0, 8);
+      }
     } else {
       sd = Ctor.precision;
       rm = Ctor.rounding;
@@ -3881,7 +4017,9 @@
       e = len = xd.length;
 
       // Remove trailing zeros.
-      for (; xd[--len] == 0;) xd.pop();
+      for (; xd[--len] == 0;) {
+        xd.pop();
+      }
 
       if (!xd[0]) {
         str = isExp ? '0p+0' : '0';
@@ -3926,7 +4064,9 @@
         for (len = xd.length; !xd[len - 1]; --len);
 
         // E.g. [4, 11, 15] becomes 4bf.
-        for (i = 0, str = ''; i < len; i++) str += NUMERALS.charAt(xd[i]);
+        for (i = 0, str = ''; i < len; i++) {
+          str += NUMERALS.charAt(xd[i]);
+        }
 
         // Add binary exponent suffix?
         if (isExp) {
@@ -3938,7 +4078,9 @@
               for (len = xd.length; !xd[len - 1]; --len);
 
               // xd[0] will always be be 1
-              for (i = 1, str = '1.'; i < len; i++) str += NUMERALS.charAt(xd[i]);
+              for (i = 1, str = '1.'; i < len; i++) {
+                str += NUMERALS.charAt(xd[i]);
+              }
             } else {
               str = str.charAt(0) + '.' + str.slice(1);
             }
@@ -3946,11 +4088,16 @@
 
           str =  str + (e < 0 ? 'p' : 'p+') + e;
         } else if (e < 0) {
-          for (; ++e;) str = '0' + str;
+          for (; ++e;) {
+            str = '0' + str;
+          }
           str = '0.' + str;
-        } else {
-          if (++e > len) for (e -= len; e-- ;) str += '0';
-          else if (e < len) str = str.slice(0, e) + '.' + str.slice(e);
+        } else if (++e > len) {
+          for (e -= len; e-- ;) {
+            str += '0';
+          }
+        } else if (e < len) {
+          str = str.slice(0, e) + '.' + str.slice(e);
         }
       }
 
@@ -3974,6 +4121,7 @@
 
 
   /*
+   * toNumber
    *  abs
    *  acos
    *  acosh
@@ -4016,6 +4164,17 @@
    *  tanh
    *  trunc
    */
+
+
+  /*
+   * Return the number representation of the given value.
+   *
+   * n {number|string|bigint|Decimal}
+   *
+   */
+  function toNumber(n) {
+    return new this(n).toNumber();
+  }
 
 
   /*
@@ -4237,7 +4396,10 @@
    *
    */
   function config(obj) {
-    if (!obj || typeof obj !== 'object') throw Error(decimalError + 'Object expected');
+    if (!obj || typeof obj !== 'object') {
+      throw Error(decimalError + 'Object expected');
+    }
+
     var i, p, v,
       useDefaults = obj.defaults === true,
       ps = [
@@ -4251,14 +4413,22 @@
       ];
 
     for (i = 0; i < ps.length; i += 3) {
-      if (p = ps[i], useDefaults) this[p] = DEFAULTS[p];
+      if (p = ps[i], useDefaults) {
+        this[p] = DEFAULTS[p];
+      }
       if ((v = obj[p]) !== void 0) {
-        if (mathfloor(v) === v && v >= ps[i + 1] && v <= ps[i + 2]) this[p] = v;
-        else throw Error(invalidArgument + p + ': ' + v);
+        if (mathfloor(v) === v && v >= ps[i + 1] && v <= ps[i + 2]) {
+          this[p] = v;
+        } else {
+          throw Error(invalidArgument + p + ': ' + v);
+        }
       }
     }
 
-    if (p = 'crypto', useDefaults) this[p] = DEFAULTS[p];
+    if (p = 'crypto', useDefaults) {
+      this[p] = DEFAULTS[p];
+    }
+
     if ((v = obj[p]) !== void 0) {
       if (v === true || v === false || v === 0 || v === 1) {
         if (v) {
@@ -4324,7 +4494,9 @@
         x = this;
 
       // Decimal called without new.
-      if (!(x instanceof Decimal)) return new Decimal(v);
+      if (!(x instanceof Decimal)) {
+        return new Decimal(v);
+      }
 
       // Retain a reference to this Decimal constructor, and shadow Decimal.prototype.constructor
       // which points to Object.
@@ -4398,119 +4570,133 @@
 
         // Infinity or NaN?
         if (v * 0 !== 0) {
-          if (!v) x.s = NaN;
-          x.e = NaN;
-          x.d = null;
-          return;
+          if (!v) {
+            x.s = NaN;
+          }
+            x.e = NaN;
+            x.d = null;
+            return;
+          }
+
+          return parseDecimal(x, v.toString());
         }
 
-        return parseDecimal(x, v.toString());
-      }
+        if (t === 'string') {
+          if ((i = v.charCodeAt(0)) === 45) {  // minus sign
+            v = v.slice(1);
+            x.s = -1;
+          } else {
+            if (i === 43) {
+              v = v.slice(1);  // plus sign
+            }
+            x.s = 1;
+          }
 
-      if (t === 'string') {
-        if ((i = v.charCodeAt(0)) === 45) {  // minus sign
-          v = v.slice(1);
-          x.s = -1;
-        } else {
-          if (i === 43) v = v.slice(1);  // plus sign
-          x.s = 1;
+          return isDecimal.test(v) ? parseDecimal(x, v) : parseOther(x, v);
         }
 
-        return isDecimal.test(v) ? parseDecimal(x, v) : parseOther(x, v);
-      }
+        if (t === 'bigint') {
+          if (v < 0) {
+            v = -v;
+            x.s = -1;
+          } else {
+            x.s = 1;
+          }
 
-      if (t === 'bigint') {
-        if (v < 0) {
-          v = -v;
-          x.s = -1;
-        } else {
-          x.s = 1;
+          return parseDecimal(x, v.toString());
         }
 
-        return parseDecimal(x, v.toString());
+        throw Error(invalidArgument + v);
       }
 
-      throw Error(invalidArgument + v);
-    }
+      Decimal.prototype = P;
 
-    Decimal.prototype = P;
+      Decimal.ROUND_UP = 0;
+      Decimal.ROUND_DOWN = 1;
+      Decimal.ROUND_CEIL = 2;
+      Decimal.ROUND_FLOOR = 3;
+      Decimal.ROUND_HALF_UP = 4;
+      Decimal.ROUND_HALF_DOWN = 5;
+      Decimal.ROUND_HALF_EVEN = 6;
+      Decimal.ROUND_HALF_CEIL = 7;
+      Decimal.ROUND_HALF_FLOOR = 8;
+      Decimal.EUCLID = 9;
 
-    Decimal.ROUND_UP = 0;
-    Decimal.ROUND_DOWN = 1;
-    Decimal.ROUND_CEIL = 2;
-    Decimal.ROUND_FLOOR = 3;
-    Decimal.ROUND_HALF_UP = 4;
-    Decimal.ROUND_HALF_DOWN = 5;
-    Decimal.ROUND_HALF_EVEN = 6;
-    Decimal.ROUND_HALF_CEIL = 7;
-    Decimal.ROUND_HALF_FLOOR = 8;
-    Decimal.EUCLID = 9;
+      Decimal.config = Decimal.set = config;
+      Decimal.clone = clone;
+      Decimal.isDecimal = isDecimalInstance;
 
-    Decimal.config = Decimal.set = config;
-    Decimal.clone = clone;
-    Decimal.isDecimal = isDecimalInstance;
+      Decimal.toNumber = toNumber;
 
-    Decimal.abs = abs;
-    Decimal.acos = acos;
-    Decimal.acosh = acosh;        // ES6
-    Decimal.add = add;
-    Decimal.asin = asin;
-    Decimal.asinh = asinh;        // ES6
-    Decimal.atan = atan;
-    Decimal.atanh = atanh;        // ES6
-    Decimal.atan2 = atan2;
-    Decimal.cbrt = cbrt;          // ES6
-    Decimal.ceil = ceil;
-    Decimal.clamp = clamp;
-    Decimal.cos = cos;
-    Decimal.cosh = cosh;          // ES6
-    Decimal.degrees = degrees;
-    Decimal.deg = degrees;
-    Decimal.div = div;
-    Decimal.divToInt = divToInt;
-    Decimal.equals = equals;
-    Decimal.eq = equals;
-    Decimal.exp = exp;
-    Decimal.floor = floor;
-    Decimal.hypot = hypot;        // ES6
-    Decimal.gt = gt;
-    Decimal.gte = gte;
-    Decimal.inv = reciprocal;
-    Decimal.lt = lt;
-    Decimal.lte = lte;
-    Decimal.ln = ln;
-    Decimal.log = log;
-    Decimal.log10 = log10;        // ES6
-    Decimal.log2 = log2;          // ES6
-    Decimal.max = max;
-    Decimal.min = min;
-    Decimal.mod = mod;
-    Decimal.mul = mul;
-    Decimal.neg = negate;
-    Decimal.negate = negate;
-    Decimal.pow = pow;
-    Decimal.product = product;
-    Decimal.prod = product;
-    Decimal.radians = radians;
-    Decimal.rad = radians;
-    Decimal.random = random;
-    Decimal.reciprocal = reciprocal;
-    Decimal.round = round;
-    Decimal.sign = sign;          // ES6
-    Decimal.sin = sin;
-    Decimal.sinh = sinh;          // ES6
-    Decimal.sqrt = sqrt;
-    Decimal.sub = sub;
-    Decimal.sum = sum;
-    Decimal.tan = tan;
-    Decimal.tanh = tanh;          // ES6
-    Decimal.trunc = trunc;        // ES6
+      Decimal.abs = abs;
+      Decimal.acos = acos;
+      Decimal.acosh = acosh;        // ES6
+      Decimal.add = add;
+      Decimal.asin = asin;
+      Decimal.asinh = asinh;        // ES6
+      Decimal.atan = atan;
+      Decimal.atanh = atanh;        // ES6
+      Decimal.atan2 = atan2;
+      Decimal.cbrt = cbrt;          // ES6
+      Decimal.ceil = ceil;
+      Decimal.clamp = clamp;
+      Decimal.cos = cos;
+      Decimal.cosh = cosh;          // ES6
+      Decimal.degrees = degrees;
+      Decimal.deg = degrees;
+      Decimal.div = div;
+      Decimal.divToInt = divToInt;
+      Decimal.equals = equals;
+      Decimal.eq = equals;
+      Decimal.exp = exp;
+      Decimal.floor = floor;
+      Decimal.hypot = hypot;        // ES6
+      Decimal.gt = gt;
+      Decimal.gte = gte;
+      Decimal.inv = reciprocal;
+      Decimal.lt = lt;
+      Decimal.lte = lte;
+      Decimal.ln = ln;
+      Decimal.log = log;
+      Decimal.log10 = log10;        // ES6
+      Decimal.log2 = log2;          // ES6
+      Decimal.max = max;
+      Decimal.min = min;
+      Decimal.mod = mod;
+      Decimal.mul = mul;
+      Decimal.neg = negate;
+      Decimal.negate = negate;
+      Decimal.pow = pow;
+      Decimal.product = product;
+      Decimal.prod = product;
+      Decimal.radians = radians;
+      Decimal.rad = radians;
+      Decimal.random = random;
+      Decimal.reciprocal = reciprocal;
+      Decimal.round = round;
+      Decimal.sign = sign;          // ES6
+      Decimal.sin = sin;
+      Decimal.sinh = sinh;          // ES6
+      Decimal.sqrt = sqrt;
+      Decimal.sub = sub;
+      Decimal.sum = sum;
+      Decimal.tan = tan;
+      Decimal.tanh = tanh;          // ES6
+      Decimal.trunc = trunc;        // ES6
 
-    if (obj === void 0) obj = {};
-    if (obj) {
-      if (obj.defaults !== true) {
-        ps = ['precision', 'rounding', 'toExpNeg', 'toExpPos', 'maxE', 'minE', 'modulo', 'crypto'];
-        for (i = 0; i < ps.length;) if (!obj.hasOwnProperty(p = ps[i++])) obj[p] = this[p];
+      Decimal.pi = pi;
+
+      Decimal.PI = PI;
+      Decimal.EXP_LIMIT = EXP_LIMIT;
+
+      if (obj === void 0) {
+        obj = {};
+      }
+
+      if (obj) {
+        if (obj.defaults !== true) {
+          ps = ['precision', 'rounding', 'toExpNeg', 'toExpPos', 'maxE', 'minE', 'modulo', 'crypto'];
+          for (i = 0; i < ps.length;) if (!obj.hasOwnProperty(p = ps[i++])) obj[p] = this[p];
       }
     }
 
@@ -4815,7 +5001,9 @@
       x = new this(args[i]);
 
     external = false;
-    for (; x.s && ++i < args.length;) x = x.mul(args[i]);
+    for (; x.s && ++i < args.length;) {
+      x = x.mul(args[i]);
+    }
     external = true;
 
     return finalise(x, this.precision, this.rounding);
@@ -4827,6 +5015,24 @@
    */
   function radians(n) {
     return new this(n).radians();
+  }
+
+  /*
+   * Returns a multiple of pi.
+   *
+   */
+  function pi(n) {
+    var result,
+      x = this,
+      Ctor = x.constructor,
+      pr = Ctor.precision;
+
+    Ctor.precision = MAX_DIGITS;
+    external = false;
+    result = new this(PI).mul(n);
+    Ctor.precision = pr;
+    external = true;
+    return result;
   }
 
 
@@ -4844,8 +5050,11 @@
       r = new this(1),
       rd = [];
 
-    if (sd === void 0) sd = this.precision;
-    else checkInt32(sd, 1, MAX_DIGITS);
+    if (sd === void 0) {
+      sd = this.precision;
+    } else {
+      checkInt32(sd, 1, MAX_DIGITS);
+    }
 
     k = Math.ceil(sd / LOG_BASE);
 
@@ -4925,7 +5134,9 @@
       for (k = 1, n = rd[0]; n >= 10; n /= 10) k++;
 
       // Adjust the exponent for leading zeros of the first word of rd.
-      if (k < LOG_BASE) e -= LOG_BASE - k;
+      if (k < LOG_BASE) {
+        e -= LOG_BASE - k;
+      }
     }
 
     r.e = e;
@@ -5087,7 +5298,7 @@
 
   // Create the internal constants from their string values.
   LN10 = new Decimal(LN10);
-  PI = Decimal.PI = new Decimal(PI);
+  PI = new Decimal(PI);
 
 
   // Export.

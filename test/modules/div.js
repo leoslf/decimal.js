@@ -4,7 +4,7 @@ T('dividedBy', function () {
 
   Decimal.config({
     precision: 40,
-    rounding: 4,
+    rounding: Decimal.ROUND_HALF_UP,
     toExpNeg: -7,
     toExpPos: 21,
     minE: -9e15,
@@ -68,6 +68,9 @@ T('dividedBy', function () {
   t(-Infinity, -Infinity, 'NaN');
 
   t(1, '1', '1');
+  t(Decimal.PI, Decimal.PI, '1');
+  t(180, 2, '90');
+  t(Decimal.PI, 2, '1.570796326794896619231321691639751442099');
   t(1, '-45', '-0.02222222222222222222222222222222222222222');
   t(1, '22', '0.04545454545454545454545454545454545454545');
   t(1, 0144, '0.01');
