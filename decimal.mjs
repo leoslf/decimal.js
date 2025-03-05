@@ -457,14 +457,7 @@ P.cubeRoot = P.cbrt = function () {
  *
  */
 P.degrees = P.deg = function () {
-  var result,
-    x = this,
-    Ctor = x.constructor,
-    pr = Ctor.precision;
-  Ctor.precision = DEGREES_PRECISION;
-  result = this.mul(RAD2DEG);
-  Ctor.precision = pr;
-  return result;
+  return this.mul(RAD2DEG);
 }
 
 
@@ -1778,14 +1771,7 @@ P.precision = P.sd = function (z) {
  *
  */
 P.radians = P.rad = function () {
-  var x = this,
-    Ctor = x.constructor,
-    pr = Ctor.precision;
-
-  Ctor.precision = RADIANS_PRECISION;
-  x = x.mul(DEG2RAD);
-  Ctor.precision = pr;
-  return x;
+  return this.mul(DEG2RAD);
 }
 
 
