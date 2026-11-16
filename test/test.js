@@ -26,6 +26,7 @@ console.log('\n Testing decimal.js\n');
   'div',
   'divToInt',
   'dpSd',
+  'equals',
   'exp',
   'floor',
   'hypot',

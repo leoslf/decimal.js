@@ -4727,7 +4727,7 @@ function divToInt(x, y) {
  *
  */
 function equals(a, b) {
-  return new this(b).equals(b);
+  return new this(a).equals(b);
 }
 
 
